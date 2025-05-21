@@ -73,9 +73,9 @@
         SwitchLayer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans                 &trans           &trans             &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans                 &trans           &trans             &trans            &Sz
-&trans  &trans  &trans  &trans  &trans  &trans            &trans          &Ue                    &trans           &Oe                &trans            &kp BACKSLASH
-&trans  &Ae     &trans  &trans  &trans  &trans            &trans          &trans                 &trans           &trans             &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans                 &trans           &trans             &trans            &de_eszett
+&trans  &trans  &trans  &trans  &trans  &trans            &trans          &de_ue                    &trans           &de_oe                &trans            &kp BACKSLASH
+&trans  &de_ae     &trans  &trans  &trans  &trans            &trans          &trans                 &trans           &trans             &trans            &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans                 &kp SEMI         &kp COLON          &trans            &trans
 &trans  &trans  &trans  &trans  &trans                                    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN  &trans
                                 &trans  &trans  &trans    &to 0           &kp UP_ARROW           &trans
