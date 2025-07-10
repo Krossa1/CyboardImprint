@@ -53,6 +53,14 @@
 };
 
 //right hand trackball configuration
+
+&trackball_peripheral_listener {
+    input-processors =
+        // this gets it to the default installation orientation,
+        <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
+};
+
+
 //left hand trackball configuration
 
 &trackball_central_listener {
