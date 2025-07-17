@@ -26,27 +26,27 @@
 
         Keyboard_Control_Layer {
             bindings = <
-&trans  &trans       &trans  &trans  &trans  &trans                    &trans     &trans             &trans           &trans           &trans           &trans
-&trans  &trans       &trans  &trans  &trans  &trans                    &trans     &rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &trans           &trans           &trans
-&trans  &kp AT_SIGN  &trans  &trans  &trans  &trans                    &trans     &rgb_ug RGB_HUI    &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans
-&trans  &trans       &trans  &trans  &trans  &trans                    &trans     &rgb_ug RGB_HUD    &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &trans
-&trans  &trans       &trans  &trans  &trans  &trans                    &trans     &trans             &kp SEMICOLON    &kp COLON        &trans           &trans
-&to 0   &trans       &trans  &trans  &trans                                       &kp LS(BACKSLASH)  &kp RA(N9)       &kp RA(MINUS)    &trans           &to 0
-                                     &trans  &trans      &trans        &kp LC(Z)  &kp LC(V)          &trans
-                                     &trans  &kp LS(N9)  &kp RA(N0)    &trans     &trans             &trans
+&trans  &trans     &trans  &trans  &trans  &trans                    &trans     &trans             &trans           &trans           &trans           &trans
+&trans  &trans     &trans  &trans  &trans  &trans                    &trans     &rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &trans           &trans           &trans
+&trans  &kp RA(Q)  &trans  &trans  &trans  &trans                    &trans     &rgb_ug RGB_HUI    &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans
+&trans  &trans     &trans  &trans  &trans  &trans                    &trans     &rgb_ug RGB_HUD    &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &trans
+&trans  &trans     &trans  &trans  &trans  &trans                    &trans     &trans             &kp SEMICOLON    &kp COLON        &trans           &trans
+&to 0   &trans     &trans  &trans  &trans                                       &kp LS(BACKSLASH)  &kp RA(N9)       &kp RA(MINUS)    &trans           &to 0
+                                   &trans  &trans      &trans        &kp LC(Z)  &kp LC(V)          &trans
+                                   &trans  &kp LS(N9)  &kp RA(N0)    &trans     &trans             &trans
             >;
         };
 
         SwitchLayer {
             bindings = <
-&trans  &trans       &trans  &trans  &trans  &trans                    &trans     &trans                    &trans         &trans         &trans  &trans
-&trans  &trans       &trans  &trans  &trans  &trans                    &trans     &trans                    &trans         &trans         &trans  &trans
-&trans  &kp AT_SIGN  &trans  &trans  &trans  &trans                    &trans     &kp LEFT_BRACKET          &trans         &kp SEMICOLON  &trans  &trans
-&trans  &kp SQT      &trans  &trans  &trans  &trans                    &trans     &trans                    &trans         &trans         &trans  &trans
-&trans  &trans       &trans  &trans  &trans  &trans                    &trans     &trans                    &kp SEMICOLON  &kp COLON      &trans  &trans
-&trans  &trans       &trans  &trans  &trans                                       &kp LS(NON_US_BACKSLASH)  &kp RA(N9)     &kp RA(MINUS)  &trans  &trans
-                                     &trans  &trans      &trans        &kp LC(Z)  &kp LC(V)                 &trans
-                                     &trans  &kp LS(N9)  &kp RA(N0)    &trans     &trans                    &trans
+&trans  &trans     &trans  &trans  &trans  &trans                    &trans     &trans                    &trans         &trans         &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans                    &trans     &trans                    &trans         &trans         &trans  &trans
+&trans  &kp RA(Q)  &trans  &trans  &trans  &trans                    &trans     &kp LEFT_BRACKET          &trans         &kp SEMICOLON  &trans  &trans
+&trans  &kp SQT    &trans  &trans  &trans  &trans                    &trans     &trans                    &trans         &trans         &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans                    &trans     &trans                    &kp SEMICOLON  &kp COLON      &trans  &trans
+&trans  &trans     &trans  &trans  &trans                                       &kp LS(NON_US_BACKSLASH)  &kp RA(N9)     &kp RA(MINUS)  &trans  &trans
+                                   &trans  &trans      &trans        &kp LC(Z)  &kp LC(V)                 &trans
+                                   &trans  &kp LS(N9)  &kp RA(N0)    &trans     &trans                    &trans
             >;
         };
     };
@@ -56,7 +56,7 @@
 
 &trackball_peripheral_listener {
     input-processors =
-        // this gets it to the default installation orientation,,
+        // this gets it to the default installation orientation,,,
         <&zip_xy_scaler 7 5>;
 };
 
@@ -64,12 +64,12 @@
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,,,,,,
+        // this gets it to the default installation orientation,,,,,,,,
         <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,
         <&zip_xy_scaler 1 8>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>;
 };
